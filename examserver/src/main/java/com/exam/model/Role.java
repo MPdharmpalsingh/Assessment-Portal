@@ -19,11 +19,21 @@ public class Role {
         this.roleName = roleName;
     }
 
+    public Role() {
+
+    }
+
     public Set<UserRole> getUserRoles() {
         return userRoles;
     }
 
     public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
+
+    public Role(Long roleId, String roleName, Set<UserRole> userRoles) {
+        this.roleId = roleId;
+        this.roleName = roleName;
         this.userRoles = userRoles;
     }
 
