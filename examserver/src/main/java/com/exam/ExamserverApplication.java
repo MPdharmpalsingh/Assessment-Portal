@@ -25,11 +25,11 @@ public class ExamserverApplication implements  CommandLineRunner{
 	public void run(String... args) throws Exception {
 		System.out.print("hi dharmpal singh");
 //		User user=new User();
-//		user.setFirstName("DPS");
-//		user.setLastName("singh");
-//		user.setUsername("Rd1");
+//		user.setFirstName("Akanksha");
+//		user.setLastName("Guptah");
+//		user.setUsername("Ag");
 //		user.setPassword("123");
-//		user.setEmail("h332@gmail.com");
+//		user.setEmail("Ag@gmail.com");
 //		user.setProfile("fault.png");
 //
 //		Role role1=new Role();

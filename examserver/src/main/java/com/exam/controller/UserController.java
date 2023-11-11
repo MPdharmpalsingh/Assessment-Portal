@@ -1,6 +1,5 @@
 package com.exam.controller;
 
-
 import com.exam.model.Role;
 import com.exam.model.User;
 import com.exam.model.UserRole;
@@ -16,24 +15,26 @@ import java.util.Set;
 public class UserController {
     @Autowired
     private UserServices userServices;
-    // creating user
+    //creating
     @PostMapping("/")
     public User createUser(@RequestBody User user) throws Exception {
         Set<UserRole> roles=new HashSet<>();
         Role role=new Role();
-
         role.setRoleId(45L);
         role.setRoleName("NORMAL");
-        UserRole userRole =new UserRole();
+
+        UserRole userRole=new UserRole();
         userRole.setUser(user);
         userRole.setRole(role);
-
         roles.add(userRole);
-        return this.userServices.createUser(user,roles);
+
+        return  this.userServices.createUser(user,roles);
     }
     @GetMapping("/{username}")
     public User getUser(@PathVariable("username")String username){
-        
-
+        return this.userServices.getUser(username);
     }
+
+
+
 }
